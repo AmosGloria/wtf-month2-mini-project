@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calculator — Student & Business</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body class="app">
+
+  <main class="dashboard">
+    <h1 class="dashboard__title">Choose Calculator</h1>
+    <div class="dashboard__cards">
+      <button class="card card--student" id="open-student">
+        <h2 class="card__title">Student Calculator</h2>
+        <p class="card__desc">Mobile UI with navbar, converters & grid keys</p>
+      </button>
+      <button class="card card--business" id="open-business">
+        <h2 class="card__title">Business Calculator</h2>
+        <p class="card__desc">Desktop-style layout (basic)</p>
+      </button>
+    </div>
+  </main>
+
+  <section class="calc calc--student" id="student-calc" hidden>
+    <header class="calc__navbar">
+      <span class="calc__time" id="nav-time">--:--</span>
+      <div class="calc__status">
+        <span class="calc__network">4G</span>
+        <span class="calc__battery" id="nav-battery">🔋--%</span>
+      </div>
+    </header>
+
+    <div class="type-box">
+      <aside class="type-box__converters">
+        <button class="chip" data-mode="currency">Currency</button>
+        <button class="chip" data-mode="scientific">Scientific</button>
+        <button class="chip" data-mode="length">Length</button>
+        <button class="chip" data-mode="fraction">Fraction</button>
+      </aside>
+
+      <div class="type-box__display">
+        <div class="display">
+          <div class="display__expression" id="display-input">0</div>
+          <div class="display__result" id="display-result">0</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="symbols">
+      <button class="btn btn--sym" data-key="AC">AC</button>
+      <button class="btn btn--sym" data-key="+/-">+/-</button>
+      <button class="btn btn--sym" data-key="%">%</button>
+      <button class="btn btn--sym" data-key="/">/</button>
+    </div>
+
+    <div class="grid" id="grid">
+      <button class="btn btn--sym" data-key="AC">AC</button>
+      <button class="btn btn--sym" data-key="+/-">+/-</button>
+      <button class="btn btn--sym" data-key="%">%</button>
+      <button class="btn btn--op"  data-key="/">/</button>
+
+      <button class="btn btn--num" data-key="7">7</button>
+      <button class="btn btn--num" data-key="8">8</button>
+      <button class="btn btn--num" data-key="9">9</button>
+      <button class="btn btn--op"  data-key="×">×</button>
+
+      <button class="btn btn--num" data-key="4">4</button>
+      <button class="btn btn--num" data-key="5">5</button>
+      <button class="btn btn--num" data-key="6">6</button>
+      <button class="btn btn--op"  data-key="-">-</button>
+
+      <button class="btn btn--num" data-key="1">1</button>
+      <button class="btn btn--num" data-key="2">2</button>
+      <button class="btn btn--num" data-key="3">3</button>
+      <button class="btn btn--op"  data-key="+">+</button>
+
+      <button class="btn btn--num btn--zero" data-key="0">0</button>
+      <button class="btn btn--num" data-key=".">.</button>
+      <button class="btn btn--sym" data-key="⌫">⌫</button>
+      <button class="btn btn--eq"  data-key="=">=</button>
+    </div>
+
+    <footer class="calc__footer">
+      <button class="link-back" id="back-from-student">← Back</button>
+    </footer>
+  </section>
+
+  <section class="calc calc--business" id="business-calc" hidden>
+    <header class="calc__topbar">
+      <h2 class="calc__title">Business Calculator</h2>
+    </header>
+    <div class="business">
+      <input class="business__display" id="biz-input" placeholder="Type expression e.g. (1200*1.075) - 450"/>
+      <div class="business__actions">
+        <button class="btn" id="biz-clear">Clear</button>
+        <button class="btn btn--eq" id="biz-eval">Evaluate</button>
+      </div>
+      <div class="business__result" id="biz-result">Result: 0</div>
+      <button class="link-back" id="back-from-business">← Back</button>
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
