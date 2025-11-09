@@ -76,6 +76,10 @@ body.app{
      padding: 12px; 
     }
 
+    .student{
+      background-color: #4D8BF5;
+    }
+
 .calc--student{
   border: 1px solid #2a2d46; 
   border-radius: 24px; 
