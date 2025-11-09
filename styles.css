@@ -9,6 +9,7 @@
   --accent: #ffd166;
   --danger: #ff6b6b;
   --success: #2ecc71;
+  --grey: #414352;
 
   --radius: 14px;
   --gap: 12px;
@@ -106,7 +107,7 @@ body.app{
 
 .calc__time{ 
     font-weight:700; 
-    color: var(--text);
+    color: var(--grey);
  }
 
 .type-box{
@@ -129,6 +130,7 @@ body.app{
   padding: 8px 10px; 
   font-size: 12px;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .chip:hover{
@@ -137,9 +139,16 @@ body.app{
 
 .type-box__display{
   background: #FCFBFC; 
-  border: 1px solid #2a2d46; 
+  width: clamp(180px, 55%, 260px);
+  justify-self: end;  
   border-radius: var(--radius); 
   padding: 8px 12px;
+}
+
+.type-box__image{
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .display{
@@ -150,7 +159,7 @@ body.app{
 .display__expression{
      font-family: var(--mono);
      font-size: 14px;
-     color: var(--muted);
+     color: var(--grey);
      overflow-x:auto; 
      white-space: nowrap; 
     }
@@ -159,6 +168,7 @@ body.app{
      font-size: 28px;
     font-weight: 800; 
     text-align: right; 
+    color: var(--grey);
 }
 
 .symbols{
