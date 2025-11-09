@@ -6,18 +6,13 @@
   <title>Calculator — Student & Business</title>
   <link rel="stylesheet" href="styles.css"/>
 </head>
-<body class="app">
+<body>
 
   <main class="dashboard">
-    <h1 class="dashboard__title">Choose Calculator</h1>
     <div class="dashboard__cards">
       <button class="card card--student" id="open-student">
         <h2 class="card__title">Student Calculator</h2>
         <p class="card__desc">Mobile UI with navbar, converters & grid keys</p>
-      </button>
-      <button class="card card--business" id="open-business">
-        <h2 class="card__title">Business Calculator</h2>
-        <p class="card__desc">Desktop-style layout (basic)</p>
       </button>
     </div>
   </main>
@@ -109,21 +104,6 @@
        <path fill="#000" fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8"/>
     </svg>
     </footer>
-  </section>
-
-  <section class="calc calc--business" id="business-calc" hidden>
-    <header class="calc__topbar">
-      <h2 class="calc__title">Business Calculator</h2>
-    </header>
-    <div class="business">
-      <input class="business__display" id="biz-input" placeholder="Type expression e.g. (1200*1.075) - 450"/>
-      <div class="business__actions">
-        <button class="btn" id="biz-clear">Clear</button>
-        <button class="btn btn--eq" id="biz-eval">Evaluate</button>
-      </div>
-      <div class="business__result" id="biz-result">Result: 0</div>
-      <button class="link-back" id="back-from-business">← Back</button>
-    </div>
   </section>
 
   <script src="app.js"></script>

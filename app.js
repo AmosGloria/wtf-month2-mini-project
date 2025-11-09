@@ -2,21 +2,17 @@
 document.addEventListener('DOMContentLoaded', () => {
   const dashboard     = document.querySelector('.dashboard');
   const openStudent   = document.getElementById('open-student');
-  const openBusiness  = document.getElementById('open-business');
   const studentCalc   = document.getElementById('student-calc');
-  const businessCalc  = document.getElementById('business-calc');
-  const backBusiness  = document.getElementById('back-from-business');
 
 
-  if (!openStudent || !openBusiness || !studentCalc || !businessCalc || !backBusiness || !dashboard) {
+
+  if (!openStudent || !studentCalc || !dashboard) {
     console.error('Missing one or more elements. Verify your HTML IDs/class names.');
     return;
   }
 
   openStudent.onclick = () => { dashboard.hidden = true;  studentCalc.hidden = false; };
-  openBusiness.onclick = () => { dashboard.hidden = true; businessCalc.hidden = false; };
-  backBusiness.onclick = () => { businessCalc.hidden = true; dashboard.hidden = false; };
-
+  
   const timeEl = document.getElementById('nav-time');
   const battEl = document.getElementById('nav-battery');
 
@@ -144,30 +140,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  const bizIn   = document.getElementById('biz-input');
-  const bizRes  = document.getElementById('biz-result');
-  const bizClr  = document.getElementById('biz-clear');
-  const bizEval = document.getElementById('biz-eval');
-
-  if (bizClr) {
-    bizClr.onclick = ()=> {
-      if (bizIn) bizIn.value = '';
-      if (bizRes) bizRes.textContent = 'Result: 0';
-    };
-  }
-
-  if (bizEval) {
-    bizEval.onclick = ()=> {
-      if (!bizIn || !bizRes) return;
-      const exp = bizIn.value.replace(/×/g,'*').replace(/÷/g,'/');
-      const cleaned = exp.replace(/[^0-9+\-*/().% ]/g, '')
-                         .replace(/(\d+(\.\d+)?)%/g, '($1/100)');
-      try{
-        const v = eval(cleaned);
-        bizRes.textContent = `Result: ${Number.isFinite(v) ? v : 'Error'}`;
-      }catch{
-        bizRes.textContent = 'Result: Error';
-      }
-    };
-  }
 });

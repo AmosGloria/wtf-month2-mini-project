@@ -10,16 +10,15 @@
   --danger: #ff6b6b;
   --success: #2ecc71;
   --grey: #414352;
-
   --radius: 14px;
   --gap: 12px;
 
-  --font: system-ui,Roboto, Inter, "Helvetica Neue", Arial, 
+  --font: system-ui,Roboto, Inter, "Helvetica Neue", Arial, monospace 
 }
 
 *{ box-sizing: border-box; }
 html, body{ margin: 0; padding: 0; }
-body.app{
+body{
   min-height: 100svh;
   background: radial-gradient(1200px 600px at 70% -10%, #223 0%, #0b0c16 60%, #070812 100%), var(--bg);
   color: var(--text);
@@ -226,49 +225,4 @@ body.app{
 .calc__footer{
      display:flex;
       justify-content:center;
-     }
-
-.link-back{
-  background: transparent; color: var(--accent); border: none; cursor: pointer; padding: 8px 10px;
-}
-
-
-.calc--business{
-  max-width: 740px;
-   background: var(--panel); 
-   border: 1px solid #2a2d46;
-   border-radius: 18px;
-    padding: 16px;
-}
-
-.calc__topbar{ 
-    display:flex;
-    justify-content: space-between;
-     align-items:center;
-     }
-
-.calc__title{ margin: 0;
-     font-size: 20px;
-     }
-
-.business{ 
-    display: grid;
-     gap: 12px; 
-    }
-
-.business__display{
-  width: 100%; padding: 12px; border-radius: 10px; border: 1px solid #2a2d46; background: #121327; color: var(--text);
-  font-family: var(--mono);
-}
-
-.business__actions{ 
-    display:flex;
-     gap: 10px;
-     }
-
-.business__result{
-     background: #121327;
-      border: 1px solid #2a2d46;
-       border-radius: 10px;
-        padding: 10px;
      }
