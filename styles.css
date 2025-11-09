@@ -38,9 +38,8 @@ body{
 }
 
 .dashboard__cards{
-  display: grid; 
-  gap: var(--gap);
-  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  display: flex;
+  justify-content: center;
 }
 
 .card{
@@ -81,7 +80,7 @@ body{
     }
 
 .calc--student{
-  border: 1px solid #2a2d46; 
+  border: 6px solid #4D8AF4; 
   border-radius: 24px; 
   background: var(--panel);
 }
