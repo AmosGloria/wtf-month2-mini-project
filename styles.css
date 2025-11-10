@@ -12,6 +12,7 @@
   --grey: #414352;
   --radius: 14px;
   --gap: 12px;
+  --calc-height: 650px;
 
   --font: system-ui,Roboto, Inter, "Helvetica Neue", Arial, monospace 
 }
@@ -20,7 +21,7 @@
 html, body{ margin: 0; padding: 0; }
 body{
   min-height: 100svh;
-  background: radial-gradient(1200px 600px at 70% -10%, #223 0%, #0b0c16 60%, #070812 100%), var(--bg);
+  background: #FFFFFF;
   color: var(--text);
   font-family: var(--font);
 }
@@ -73,6 +74,7 @@ body{
      margin: 12px auto; 
      display: grid; gap: var(--gap); 
      padding: 12px; 
+      min-height: var(--calc-height); 
     }
 
     .student{
@@ -89,7 +91,7 @@ body{
   display: flex; 
   justify-content: space-between; 
   align-items: center;
-  padding: 8px 12px; 
+  padding: 0 12px; 
   background: var(--panel-2); 
   border-radius: 14px;
   font-variant-numeric: tabular-nums; 
@@ -224,4 +226,8 @@ body{
 .calc__footer{
      display:flex;
       justify-content:center;
+     }
+
+ .calc__footer svg{
+     margin-top: 20px;
      }
