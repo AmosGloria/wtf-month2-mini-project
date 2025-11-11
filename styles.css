@@ -12,7 +12,7 @@
   --grey: #414352;
   --radius: 14px;
   --gap: 12px;
-  --calc-height: 650px;
+  --calc-height: 600px;
 
   --font: system-ui,Roboto, Inter, "Helvetica Neue", Arial, monospace 
 }
@@ -70,11 +70,32 @@ body{
 }
 
 .calc{
-     max-width: 420px; 
+     max-width: 320px; 
      margin: 12px auto; 
      display: grid; gap: var(--gap); 
      padding: 12px; 
       min-height: var(--calc-height); 
+    }
+
+    .calc__header{
+      display: flex;
+      background-color: var(--panel-2);
+      align-items: center;
+      justify-content: space-between;
+      height: 30px;
+      padding: 12px;
+      border-radius: var(--radius);
+      color: var(--grey);
+      font-weight: 600;
+    }
+
+    .calc__header p{
+      display: flex;
+      align-items: center;
+    }
+
+    .calc__header p svg {
+      margin-top: 8px;
     }
 
     .student{
@@ -139,7 +160,7 @@ body{
 
 .type-box__display{
   background: #FCFBFC; 
-  width: clamp(180px, 55%, 260px);
+  width: clamp(120px, 44%, 200px);
   justify-self: end;  
   border-radius: var(--radius); 
   padding: 8px 12px;
